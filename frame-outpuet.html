@@ -1,0 +1,104 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<style type="text/css">
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+iframe.Deuteranomaly {
+	filter: url('#Deuteranomaly');
+	-webkit-filter: url('#Deuteranomaly');
+}
+
+// -- New -- //
+
+
+
+.imageSlider {
+	border: 1px solid black;
+}
+
+
+div#sliderTool {
+	position: relative;
+}
+
+
+
+#observation {
+	background: green;
+	width: 10%;
+	max-width: 1000px;
+	height: 600px;
+	resize: horizontal;
+	overflow: none;
+	z-index: 100;
+	position: relative;
+	cursor: horizontal;
+	overflow-x: hidden;
+
+}
+
+#observation:before {
+    content: '↔';
+    background: rgba(0,0,0,.7);
+    font-size: 18px;
+    color: white;
+    top: 0;
+    right: 0px;
+    height: 100%;
+    line-height: 1177px;
+    position: absolute;
+
+}
+
+#control {
+	position: absolute;
+	top: 0;
+	overflow: none;
+	background: red;
+	width: 1000px;
+	height: 600px;
+	overflow-x: hidden;
+}
+
+
+
+</style>
+
+</head>
+
+<div id="sliderTool">
+<div id="observation"><iframe src="http://zeldman.com" height="600" width="1000"  ></iframe></div>
+<div id="control"><iframe src="http://zeldman.com" height="600" width="100%" class="Deuteranomaly"></iframe></div>
+</div>
+
+<!-- 01 // Deuteranomaly -->
+<svg><defs><filter id="Deuteranomaly"><feColorMatrix 
+type="matrix" values="0.8 0.2 0 0 0, 0.258 0.742 0 0 0, 0 0.142 0.858 0 0, 0 0 0 1 0"/></filter></defs></svg>
+
+
+<!-- <div class="imageSlider">
+	<div id="sliderTool">
+		<iframe id="obsersvation" name="obsersvation" title="obsersvation" 
+		class="Deuteranomaly" src="http://cnn.com/" scrolling="no" /></iframe>
+	</div>
+	<iframe id="control" name="control" title="control"  
+	class="control" src="http://cnn.com/" scrolling="no" /></iframe>
+</div> -->
+
+
+</body>
+</html>

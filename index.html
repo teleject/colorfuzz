@@ -1,0 +1,296 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+	<title>Eye Sight</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+<style type="text/css">
+
+* { box-sizing: border-box; }
+
+html, body {  height: 100% }
+
+body {
+	padding: 5px;
+}
+
+h1 {
+	display: block;
+	margin: 0 auto; 
+	text-align: center;
+}
+
+.is-active {
+}
+
+#masthead {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	align-content: center;
+	margin: 0 .66em .66em;
+}
+
+#masthead > div {
+	margin: 0 auto;
+	flex-basis: auto;
+}
+
+
+
+form {
+
+}
+
+form .checkLink {
+	
+}
+
+.form--URL {
+	content: nowrap;
+}
+
+form input[type="text"] {
+	padding: .3em;
+	font-size: 2.5em;
+}
+form input[type="submit"] {
+	padding: .3em;
+	font-size: 2.5em;
+}
+
+.form--options {
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: center;
+	padding: 0 .66em .66em;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.form--options div {
+	display: inline-block;
+	flex-basis: 10em;
+	padding-bottom: .67em;
+}
+
+.form--options div {
+
+}
+
+#slider {
+	position: relative;
+	height: 1000px;
+	background-color: #eee;
+}
+
+#slider h4 {
+	font-size: .9em;
+	position: absolute;
+	left: 0;
+	z-index: 100;
+	background: radial-gradient(50% 50%, rgb(243, 255, 242), rgb(247, 255, 234)), black; 
+	border: .1em solid black; 
+	padding: .1em .2em .1em .66em; 
+	margin-top: 1em;
+	-webkit-background-clip: text, border; 
+	color: transparent;
+}
+
+iframe {
+	min-height: calc(100% - 15em);
+	width: 1000px;
+	border: .2em solid black;
+}
+
+iframe.Deuteranomaly {
+	filter: url('#Deuteranomaly');
+	-webkit-filter: url('#Deuteranomaly');
+}
+
+iframe.Protanomaly {
+	filter: url('#Protanomaly');
+	-webkit-filter: url('#Protanomaly');
+}
+
+iframe.Deuteranopia {
+	filter: url('#Deuteranopia');
+	-webkit-filter: url('#Deuteranopia');
+}
+
+iframe.Protanopia {
+	filter: url('#Protanopia');
+	-webkit-filter: url('#Protanopia');
+}
+
+iframe.Tritanopia {
+	filter: url('#Tritanopia');
+	-webkit-filter: url('#Tritanopia');
+}
+
+iframe.Achromatopsia {
+	filter: url('#Achromatopsia');
+	-webkit-filter: url('#Achromatopsia');
+}
+
+label, input[type="radio"] {
+	cursor:  pointer;
+}
+
+
+
+
+
+</style>
+
+
+</head>
+<body class="is-active">
+
+<div id="masthead">
+	<div>
+		<h1><a href="/"><img src="http://placekitten.com/g/80/60" /></a></h1>
+	</div>
+
+	<div>
+		<form name="eyesightForm" id="eyesightForm">
+
+		<div class="form--URL">
+			<input type="text" id="checkLink" name="checkLink" placeholder="http://" />
+			<input type="submit" value="➜">
+		</div>
+
+	</div>
+	
+	<div class="form--options">
+
+<div><input type="radio" name="eyesight" value="Deuteranomaly" checked="checked" id="optionDeuteranomaly"> <label for="optionDeuteranomaly" title="Red-green color-blindness. Affects 5.35%">Deuteranomaly</label></label></div>
+
+<div><input type="radio" name="eyesight" value="Protanomaly" id="optionProtanomaly"> <label for="optionProtanomaly" title="Missing the L-cone, different intensities of red light. Affects 1.11%">Protanomaly</a></label></div>
+
+<div><input type="radio" name="eyesight" value="Deuteranopia" id="optionDeuteranopia"><label for="optionDeuteranopia" title="Red-green color blindness due to missing M-cone. Affects 1.1%"> Deuteranopia </a></label></div>
+
+
+<div><input type="radio" name="eyesight" value="Protanopia" id="optionProtanopia"> <label for="optionProtanopia" title="A type of red-green color-blindness. Affects 1.03%">Protanopia</a></label></div> 
+
+<div><input type="radio" name="eyesight" value="Tritanopia" id="optionTritanopia"> <label for="optionTritanopia" title="Blue-yellow colorblindness due to missing S-cone. Affects <1%">Tritanopia</a></label></div>
+
+
+<div><input type="radio" name="eyesight" value="Achromatopsia" id="optionAchromatopsia"> <label for="optionAchromatopsia" title="Rod monochromacy. Affects 0.003%">Achromatopsia</a></label></div>
+
+</div>
+
+</form>
+
+</div><!-- /#masthead -->
+
+
+<div id="slider"><h4 id="label">Deuteranomaly</h4><iframe id="pageOutput" src="http://www.colormatters.com/color-and-design/basic-color-theory" class="Deuteranopia" width="800" height="300" frameborder="0" allowfullscreen></iframe></div>
+
+<!-- iframe slider? -->
+
+
+
+<!-- 01 // Deuteranomaly -->
+<svg><defs><filter id="Deuteranomaly"><feColorMatrix 
+type="matrix" values="0.8 0.2 0 0 0, 0.258 0.742 0 0 0, 0 0.142 0.858 0 0, 0 0 0 1 0"/></filter></defs></svg>
+
+<!-- 02 // Protanomaly -->
+<svg><defs><filter id="Protanomaly"><feColorMatrix 
+type="matrix" values="0.817 0.183 0 0 0, 0.333 0.667 0 0 0, 0 0.125 0.875 0.114 0, 0 0 0 1 0"/></filter></defs></svg>
+
+<!-- 03 // Deuteranopia -->
+<svg><defs><filter id="Deuteranopia"><feColorMatrix 
+type="matrix" values="0.625 0.375 0 0 0, 0.7 0.3 0 0 0, 0 0.3 0.7 0.114 0, 0 0 0 1 0"/></filter></defs></svg>
+
+<!-- 04 // Protanopia -->
+<svg><defs><filter id="Protanopia"><feColorMatrix 
+type="matrix" values="0.567 0.433 0 0 0, 0.558 0.442 0 0 0, 0 0.242 0.758 0.114 0, 0 0 0 1 0"/></filter></defs></svg>
+
+<!-- 05 // Tritanopia -->
+<svg><defs><filter id="Tritanopia"><feColorMatrix 
+type="matrix" values="0.95 0.05 0 0 0, 0 0.433 0.567 0 0, 0 0.475 0.525 0 0, 0 0 0 1 0"/></filter></defs></svg>
+
+<!-- 06 // Achromatopsia -->
+<svg><defs><filter id="Achromatopsia"><feColorMatrix 
+type="matrix" values="0.299 0.587 0.114 0 0, 0.299 0.587 0.114 0 0, 0.299 0.587 0.114 0 0, 0 0 0 1 0"/></filter></defs></svg>
+
+
+<script> 
+
+// 1. When user starts typing into the searchbox, class value "is-active" added to BODY element
+	// Causes search form change, etc.
+// 2. When Go button is clicked, the URLs is a) checked for formatting and then 2) appearsin the iframe appear.
+// 3. Clicking on the radio button, the class value get updated to the iframe.
+
+var code = function (eventObject) {
+    if (eventObject.preventDefault) {
+        eventObject.preventDefault();
+    } else if (window.event) /* for ie */ {
+        window.event.returnValue = false;
+    }
+
+
+    var checkLinkSource = document.getElementById("checkLink")
+	var browserFrame = document.getElementById("pageOutput");
+        browserFrame.src = document.getElementById("checkLink").value;
+        alert(browserFrame.src);
+
+    return true;
+};
+
+var element = window.document.getElementById("eyesightForm");
+if (element.addEventListener) {
+    element.addEventListener("submit", code, false);
+} else if (element.attachEvent) {
+    element.attachEvent("onsubmit", code);
+}
+
+    var rad = document.eyesightForm.eyesight;
+    var prev = null;
+    for(var i = 0; i < rad.length; i++) {
+        rad[i].onclick = function() {
+           // (prev)? console.log(prev.value):null;
+           // if(this !== prev) {
+            //    prev = this;
+           // }
+           
+            console.log(this.value);
+            var affliction = this.value;
+
+		var d = document.getElementById("pageOutput");
+		d.className = affliction;
+		document.getElementById("label").innerHTML = affliction;
+
+        };
+    }
+
+
+function ValidURL(str) {
+  var pattern = new RegExp('^(https?:\/\/)?'+ // protocol
+    '((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|'+ // domain name
+    '((\d{1,3}\.){3}\d{1,3}))'+ // OR ip (v4) address
+    '(\:\d+)?(\/[-a-z\d%_.~+]*)*'+ // port and path
+    '(\?[;&a-z\d%_.~+=-]*)?'+ // query string
+    '(\#[-a-z\d_]*)?$','i'); // fragment locater
+  if(!pattern.test(str)) {
+    alert("Please enter a valid URL.");
+    return false;
+  } else {
+    return true;
+  }
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+

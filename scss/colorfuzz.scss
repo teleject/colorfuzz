@@ -1,0 +1,138 @@
+
+* { box-sizing: border-box; }
+
+html, body {  height: 100% }
+
+body {
+	padding: 5px;
+}
+
+h1 {
+	display: block;
+	margin: 0 auto; 
+	text-align: center;
+}
+
+.is-active {
+}
+
+#masthead {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	align-content: center;
+	margin: 0 .66em .66em;
+}
+
+#masthead > div {
+	margin: 0 auto;
+	flex-basis: auto;
+}
+
+
+
+form {
+
+}
+
+form .checkLink {
+	
+}
+
+.form--URL {
+	content: nowrap;
+}
+
+form input[type="text"] {
+	padding: .3em;
+	font-size: 2.5em;
+}
+form input[type="submit"] {
+	padding: .3em;
+	font-size: 2.5em;
+}
+
+.form--options {
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: center;
+	padding: 0 .66em .66em;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.form--options div {
+	display: inline-block;
+	flex-basis: 10em;
+	padding-bottom: .67em;
+}
+
+.form--options div {
+
+}
+
+#slider {
+	position: relative;
+	height: 1000px;
+	background-color: #eee;
+}
+
+#slider h4 {
+	font-size: .9em;
+	position: absolute;
+	left: 0;
+	z-index: 100;
+	background: radial-gradient(50% 50%, rgb(243, 255, 242), rgb(247, 255, 234)), black; 
+	border: .1em solid black; 
+	padding: .1em .2em .1em .66em; 
+	margin-top: 1em;
+	-webkit-background-clip: text, border; 
+	color: transparent;
+}
+
+iframe {
+	min-height: calc(100% - 15em);
+	width: 1000px;
+	border: .2em solid black;
+}
+
+iframe.Deuteranomaly {
+	filter: url('#Deuteranomaly');
+	-webkit-filter: url('#Deuteranomaly');
+}
+
+iframe.Protanomaly {
+	filter: url('#Protanomaly');
+	-webkit-filter: url('#Protanomaly');
+}
+
+iframe.Deuteranopia {
+	filter: url('#Deuteranopia');
+	-webkit-filter: url('#Deuteranopia');
+}
+
+iframe.Protanopia {
+	filter: url('#Protanopia');
+	-webkit-filter: url('#Protanopia');
+}
+
+iframe.Tritanopia {
+	filter: url('#Tritanopia');
+	-webkit-filter: url('#Tritanopia');
+}
+
+iframe.Achromatopsia {
+	filter: url('#Achromatopsia');
+	-webkit-filter: url('#Achromatopsia');
+}
+
+label, input[type="radio"] {
+	cursor:  pointer;
+}
+
+
+

@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  padding: 5px; }
+
+h1 {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+#masthead {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  margin: 0 .66em .66em; }
+
+#masthead > div {
+  margin: 0 auto;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto; }
+
+.form--URL {
+  content: nowrap; }
+
+form input[type="text"] {
+  padding: .3em;
+  font-size: 2.5em; }
+
+form input[type="submit"] {
+  padding: .3em;
+  font-size: 2.5em; }
+
+.form--options {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  padding: 0 .66em .66em;
+  width: 75%;
+  margin: 0 auto; }
+
+.form--options div {
+  display: inline-block;
+  -webkit-flex-basis: 10em;
+      -ms-flex-preferred-size: 10em;
+          flex-basis: 10em;
+  padding-bottom: .67em; }
+
+#slider {
+  position: relative;
+  height: 1000px;
+  background-color: #eee; }
+
+#slider h4 {
+  font-size: .9em;
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  background: -webkit-radial-gradient(50% 50%, #f3fff2, #f7ffea), black;
+  background: radial-gradient(50% 50%, #f3fff2, #f7ffea), black;
+  border: .1em solid black;
+  padding: .1em .2em .1em .66em;
+  margin-top: 1em;
+  -webkit-background-clip: text, border;
+  color: transparent; }
+
+iframe {
+  min-height: calc(100% - 15em);
+  width: 1000px;
+  border: .2em solid black; }
+
+iframe.Deuteranomaly {
+  filter: url("#Deuteranomaly");
+  -webkit-filter: url("#Deuteranomaly"); }
+
+iframe.Protanomaly {
+  filter: url("#Protanomaly");
+  -webkit-filter: url("#Protanomaly"); }
+
+iframe.Deuteranopia {
+  filter: url("#Deuteranopia");
+  -webkit-filter: url("#Deuteranopia"); }
+
+iframe.Protanopia {
+  filter: url("#Protanopia");
+  -webkit-filter: url("#Protanopia"); }
+
+iframe.Tritanopia {
+  filter: url("#Tritanopia");
+  -webkit-filter: url("#Tritanopia"); }
+
+iframe.Achromatopsia {
+  filter: url("#Achromatopsia");
+  -webkit-filter: url("#Achromatopsia"); }
+
+label, input[type="radio"] {
+  cursor: pointer; }

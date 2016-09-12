@@ -1,0 +1,7 @@
+### CodeKit ###
+# General CodeKit files to ignore
+config.codekit
+/min
+
+# Other
+.DS_Store
