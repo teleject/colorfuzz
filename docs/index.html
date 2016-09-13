@@ -2,18 +2,37 @@
 <html>
 	<head>
 	<meta charset="utf-8">
-		<title>Eye Sight</title>
+		<title>Color Fuzz! The Color Blindness Web Site Tester</title>
 	<meta name="viewport" content="width=device-width">
+
+<meta property="og:title" content="Color Fuzz! The Color Blindness Web Site Tester" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Test your live site against common color blindness afflictions. No additional software required." />
+<meta property="og:determiner" content="the" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="http://colorfuzz.com/" />
+<meta property="og:image" content="http://colorfuzz.com/img/socialgraph.jpg" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@teleject">
+<meta name="twitter:title" content="Color Fuzz! The Color Blindness Web Site Tester">
+<meta name="twitter:description" content="Test your live site against common color blindness afflictions. No additional software required.">
+<meta name="twitter:image" content="http://colorfuzz.com/img/socialgraph.jpg">  
+<meta name="apple-mobile-web-app-title" content="Color Fuzz!" />
+
+<meta name="description" content="Test your live site against common color blindness afflictions in your browser. No additional software required." /> 
+<meta name="robots" content="index,follow" /> 
+<meta name="robots" content="noodp" />
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
 	<link rel="stylesheet" href="/css/colorfuzz.css" />
-
 
 </head>
 <body class="is-active">
 
 <div id="masthead">
+<div id="searchbox">
 	<div>
-		<h1><a href="/"><img src="http://placekitten.com/g/80/60" /></a></h1>
+		<h1><a href="/"><img src="/img/colorfuzz.png" alt="Color Fuzz!" /></a></h1>
 	</div>
 
 	<div>
@@ -21,11 +40,11 @@
 
 		<div class="form--URL">
 			<input type="text" id="checkLink" name="checkLink" placeholder="http://" />
-			<input type="submit" value="➜">
 		</div>
-
 	</div>
-	
+</div><!-- /#searchbox -->
+
+
 	<div class="form--options">
 
 <div><input type="radio" name="eyesight" value="Deuteranomaly" checked="checked" id="optionDeuteranomaly"> <label for="optionDeuteranomaly" title="Red-green color-blindness. Affects 5.35%">Deuteranomaly</label></label></div>
@@ -78,7 +97,6 @@ type="matrix" values="0.95 0.05 0 0 0, 0 0.433 0.567 0 0, 0 0.475 0.525 0 0, 0 0
 <!-- 06 // Achromatopsia -->
 <svg><defs><filter id="Achromatopsia"><feColorMatrix 
 type="matrix" values="0.299 0.587 0.114 0 0, 0.299 0.587 0.114 0 0, 0.299 0.587 0.114 0 0, 0 0 0 1 0"/></filter></defs></svg>
-
 
 <script src="/js/colorfuzz-min.js"></script>
 </script>

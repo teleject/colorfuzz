@@ -1,11 +1,66 @@
 
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media screen and (min-width: 1319px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media screen and (min-width: 1059px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media screen and (min-width: 650px)  { @content; }
+  }
+}
+
+
 * { box-sizing: border-box; }
 
 html, body {  height: 100% }
 
-body {
-	padding: 5px;
+html {
+	font-size: calc(1em + 1vw);
 }
+
+@media screen and (min-width: 50em) {
+  html {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  html {
+    font-size: 1.5em;
+  }
+}
+
+body {
+	background-color: #fff;
+	@include breakpoint(papa-bear) { 
+		padding: .3em;
+		margin-top: 1em;
+	}
+
+	@include breakpoint(mama-bear) { 
+		padding: .3em;
+	}
+	@include breakpoint(baby-bear) { 
+		padding: 0;
+	}
+
+}
+
+a:link {
+	color:	#000;
+}
+a:visited {
+	color: #999;
+}
+a:link:active, a:visited:active {
+	color: #ccc;
+}
+a:link:active, a:visited:active {
+	color: #cf0;
+}
+
 
 h1 {
 	display: block;
@@ -13,63 +68,129 @@ h1 {
 	text-align: center;
 }
 
+h1 img {
+	max-height: 2em;
+	opacity: .5;
+		@include breakpoint(baby-bear) {
+margin-top: 1em;
+		}
+}
+
 .is-active {
 }
 
-#masthead {
-	flex-direction: column;
-	flex-wrap: nowrap;
-	display: flex;
-	justify-content: center;
-	align-items: baseline;
-	align-content: center;
-	margin: 0 .66em .66em;
+#searchbox {
+	 display: flex;
+	 flex-direction: row;
+	 flex-wrap: nowrap;
+	 justify-content: space-between;
+	 align-items: stretch;
+	 align-content: stretch;
+	@include breakpoint(baby-bear) { 
+		margin: 0 25%;
+	}
 }
 
-#masthead > div {
-	margin: 0 auto;
-	flex-basis: auto;
-}
+#searchbox > div {
 
+}
 
 
 form {
 
 }
 
-form .checkLink {
-	
+form #checkLink {
+	width: 100%;
+	@include breakpoint(baby-bear) { 
+			width: 100%;			
+	}
 }
 
 .form--URL {
-	content: nowrap;
+	xcontent: nowrap;
 }
 
 form input[type="text"] {
 	padding: .3em;
-	font-size: 2.5em;
+	font-size: 2em;
+	margin: 0;
 }
 form input[type="submit"] {
 	padding: .3em;
-	font-size: 2.5em;
+	font-size: 2em;
+	margin: 0;
+}
+
+#searchbox {
+	flex-wrap: nowrap;
+	display: flex;
+	justify-content: center;
+	align-content: stretch;
+	flex-direction: row;
+		@include breakpoint(baby-bear) { 
+				flex-direction: column;
+				  flex-wrap: nowrap;
+		}
+}
+
+#searchbox > div {
+
 }
 
 .form--options {
 	flex-wrap: wrap;
 	display: flex;
 	justify-content: space-around;
-	align-items: baseline;
-	align-content: center;
-	padding: 0 .66em .66em;
-	width: 75%;
+	align-items: flex-start;
+	align-content: stretch;
+	padding: 1.33em .66em .66em;
+	width: 70%;
 	margin: 0 auto;
+	flex-basis: auto;
+	@include breakpoint(papa-bear) { 
+		flex-basis: 18em;
+		width: 90%;
+	}
 }
 
 .form--options div {
 	display: inline-block;
-	flex-basis: 10em;
+	flex-basis: 11em;
 	padding-bottom: .67em;
+
+	@include breakpoint(papa-bear) { 
+		flex-basis: 18em;
+	}
+	@include breakpoint(mama-bear) { 
+		flex-basis: 15em; 
+	}
+	@include breakpoint(baby-bear) { 
+		flex-basis: 11em;
+	}
 }
+
+
+
+@media (max-width:650px){
+.form--options {
+	width: 100%;
+}
+
+.form--options {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	justify-content: flex-end;
+	}
+	.form--options div {
+		margin: auto;
+			flex-basis: 45%;
+	}
+}
+
+
 
 .form--options div {
 
@@ -92,7 +213,9 @@ form input[type="submit"] {
 	margin-top: 1em;
 	-webkit-background-clip: text, border; 
 	color: transparent;
+	border-right-corner: 5px;
 }
+
 
 iframe {
 	min-height: calc(100% - 15em);
