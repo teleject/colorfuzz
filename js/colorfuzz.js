@@ -11,13 +11,11 @@ var code = function (eventObject) {
     }
 
 
-   // var checkLinkSource = document.getElementById("checkLink");
 	var browserFrame = document.getElementById("pageOutput");
       browserFrame.src = document.getElementById("checkLink").value;
-      // alert(browserFrame.src);
-
     return true;
 };
+
 
 var element = window.document.getElementById("eyesightForm");
 if (element.addEventListener) {
@@ -26,24 +24,16 @@ if (element.addEventListener) {
     element.attachEvent("onsubmit", code);
 }
 
-    var rad = document.eyesightForm.eyesight;
-   // var prev = null;
-    for(var i = 0; i < rad.length; i++) {
-        rad[i].onclick = function() {
-           // (prev)? console.log(prev.value):null;
-           // if(this !== prev) {
-            //    prev = this;
-           // }
-           
-        //    console.log(this.value);
-            var affliction = this.value;
+var rad = document.eyesightForm.eyesight;
+for(var i = 0; i < rad.length; i++) {
+  rad[i].onclick = function() {
+    var affliction = this.value;
+		var d = document.getElementById("pageOutput");
+		d.className = affliction;
+		document.getElementById("label").innerHTML = affliction;
+  };
+}
 
-		  var d = document.getElementById("pageOutput");
-		  d.className = affliction;
-		  document.getElementById("label").innerHTML = affliction;
-
-        };
-    }
 
 
 /*function ValidURL(str) {
