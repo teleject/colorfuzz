@@ -27,6 +27,25 @@
 .                                         .          .         .  
  */
 
+$min_width: 400;
+$max_width: 1200;
+
+$min_font: 12;
+$max_font: 24; 
+
+:root { font-size: #{$min_font}px; }
+
+@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px) {
+  :root { 
+    font-size: calc(#{$min_font}px + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width})));
+  }
+}
+@media (min-width: #{$max_width}px) {
+  :root { 
+    font-size: #{$max_font}px;
+  }
+}
+
 @mixin breakpoint($point) {
   @if $point == papa-bear {
     @media screen and (min-width: 1319px) { @content; }
@@ -100,7 +119,7 @@ h1 img {
 	max-height: 2em;
 	opacity: .5;
 		@include breakpoint(baby-bear) {
-margin-top: 1em;
+			margin-top: 1em;
 		}
 }
 
@@ -131,14 +150,46 @@ form {
 
 form #checkLink {
 	width: 100%;
+	background-color: 000;
+	color: #999;
 	@include breakpoint(baby-bear) { 
 			width: 100%;			
 	}
 }
 
-.form--URL {
-	xcontent: nowrap;
+
+#radios {  
+	margin: 1em 2.5vh;
+	columns: 15rem;
+    column-gap: 4rem;
+	background: #ccc;
+	color: #333;
+    padding: .667rem 1vw .5rem 5vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+	line-height: 2em;
+		border-radius: .1em;
+
 }
+
+#radios > div {
+    margin: 0;
+    padding: 0;
+    xpage-break-inside: avoid;
+    xbreak-inside: avoid;
+	xwhite-space:nowrap;
+	xdisplay:inline-block;
+	vertical-align: baseline;
+
+}
+
+#radios > input {
+	display: block;
+	margin-bottom: 1rem;
+}
+
 
 form input[type="text"] {
 	padding: .3em;
