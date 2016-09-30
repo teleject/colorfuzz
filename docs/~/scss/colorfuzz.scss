@@ -1,0 +1,319 @@
+$bgcolor: #fff;
+$text: #666;
+$link: #000;
+$vlink: #999;
+$alink: #ccc;
+
+$min_width: 400;
+$max_width: 1200;
+
+$min_font: 12;
+$max_font: 24; 
+
+:root { font-size: #{$min_font}px; }
+
+@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px) {
+  :root { 
+    font-size: calc(#{$min_font}px + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width})));
+  }
+}
+@media (min-width: #{$max_width}px) {
+  :root { 
+    font-size: #{$max_font}px;
+  }
+}
+
+*,:before,:after {
+	box-sizing: border-box;
+}
+
+body {
+}
+
+html,
+body {
+ 	height: 100%;
+ 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; 
+ 	color: $text;
+	background-color: $bgcolor;
+	margin: 0;
+}
+header {
+	position: relative;
+	background-color: #fff;
+	display: block;
+	padding-top: 15%;
+}
+h1 { 
+	letter-spacing: -.1rem;
+	text-align: center;
+	color: $text;
+	font-size: 5rem;
+	background-image: url(/img/bkgd.gif);
+	background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+	-ms-text-fill-color: transparent;
+	text-fill-color: transparent;
+  -webkit-background-clip: text;
+	-ms-background-clip: text;
+	background-clip: text;
+	background-size: cover;
+	background-position: 50% 0;
+	background-repeat: repeat-x;
+	animation: animatedBackground 40s linear infinite alternate-reverse;
+	animation-fill-mode: forwards;
+	margin: 0;
+	padding: 0;
+}
+h1 > em { 
+		font-family: Georgia;
+	background-image: url(/img/bkgd.gif);
+	   background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+	background-size: inherit;
+	background-position: 50% 0%;
+	background-repeat: repeat-x;
+animation: animatedBackgroundMirror 45s linear infinite alternate-reverse;
+	animation-fill-mode: forwards;
+  filter: blur(2.3px);
+}
+
+header > p {
+	margin: -.1rem 0 2.66rem 0;
+	text-align: center;
+
+}
+
+
+
+// URL FORM 
+
+#urlForm {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#urlName, input[type="submit"] {
+	padding: .3em;
+    font-size: 2em;
+    border-radius: .1em;
+    background-color: $text;
+    color: $bgcolor;
+}
+
+
+
+ span {
+	padding: .3em;
+    font-size: 2em;
+    border-radius: .1em;
+    color: $bgcolor;
+}
+
+input[type="submit"] {
+    background-color: $bgcolor;
+    color: $text;
+    border: none;
+}
+
+// RADIOS
+
+fieldset {
+	text-algin: left;
+		margin: 1em 6vh;
+}
+
+legend {
+	text-align: center;
+}
+
+#radios {  
+	columns: 30vw;
+    column-gap: 1vw;
+	color: #333;
+    padding: .667rem 1vw .5rem 5vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: .6rem;
+	line-height: 2em;
+	border-radius: .1em;
+	text-align: left;
+}
+
+#radios > div {
+    margin: 0;
+    padding: 0;
+	vertical-align: baseline;
+	white-space: nowrap;
+}
+
+#radios > input {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+@keyframes animatedBackgroundMirror {
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
+}
+
+// is-active
+
+.is-active body {
+	border-top: none;
+	border-size: 0;
+}
+
+.is-active header p {
+	display: none;
+}
+
+.is-active header {
+	position: fixed;
+	padding-top: 0;
+	z-index: 1000;
+}
+
+.is-active header h1 , .is-active header h1 em {
+	font-size: 1rem;
+	margin: 0;
+	padding: 0;
+	animation-name: none;
+	filter: blur(0);
+	color: $text;
+}
+
+.is-active article {
+	background-color: rgba(255,255,255,.8);
+	position: relative;
+	z-index: 100;
+	padding: 0;
+	margin: 0;
+	top: 0;
+}
+
+.is-active label {
+	text-shadow: 0 0 1px white, 0 0 2px white, 0 0 4px white, 0 0 7px white;
+}
+
+.is-active #urlName {
+	padding: 0 0.3rem;
+    font-size: 1rem;
+    border-radius: .1em;
+    width: 33%;
+    background-color: $text;
+    color: $bgcolor;
+    margin: 0;
+}
+
+.is-active input[type="submit"] {
+    font-size: 1rem;
+}
+
+.is-active span {
+	background: none;
+	font-size: .8rem;
+}
+
+.is-active fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.is-active legend {
+	display: none;
+}
+
+.is-active input {
+	margin-bottom: .01rem;
+}
+
+.is-active #radios {
+	margin: 0 inherit;
+	padding: 0 inherit;
+}
+
+.is-active #urlForm {
+	margin: 0;
+	padding: 0;
+}
+
+// iframe
+
+#iframe-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+iframe {
+	display: none;
+	border: none;
+	height: 0;
+	width: 0;
+}
+
+.is-active iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	resize: auto;
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index: 1;
+}
+
+iframe.Deuteranomaly {
+	filter: url('#Deuteranomaly');
+	-webkit-filter: url('#Deuteranomaly');
+}
+
+iframe.Protanomaly {
+	filter: url('#Protanomaly');
+	-webkit-filter: url('#Protanomaly');
+}
+
+iframe.Deuteranopia {
+	filter: url('#Deuteranopia');
+	-webkit-filter: url('#Deuteranopia');
+}
+
+iframe.Protanopia {
+	filter: url('#Protanopia');
+	-webkit-filter: url('#Protanopia');
+}
+
+iframe.Tritanopia {
+	filter: url('#Tritanopia');
+	-webkit-filter: url('#Tritanopia');
+}
+
+iframe.Achromatopsia {
+	filter: url('#Achromatopsia');
+	-webkit-filter: url('#Achromatopsia');
+}
+
+label, input[type="radio"] {
+	cursor:  pointer;
+}
+
+footer {
+	font-size: small;
+	position: absolute; 
+	top: 2%;
+	right: 2%;
+}
+
+.is-active footer {
+	display: none;
+}
+

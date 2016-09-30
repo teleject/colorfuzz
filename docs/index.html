@@ -2,78 +2,56 @@
 <html>
 	<head>
 	<meta charset="utf-8">
-		<title>Color Fuzz! The Color Blindness Web Site Tester</title>
+		<title>Color Fuzz. The color blindness site tester </title>
 	<meta name="viewport" content="width=device-width">
-
-	<meta property="og:title" content="Color Fuzz! The Color Blindness Web Site Tester" />
-	<meta property="og:type" content="website" />
-	<meta property="og:description" content="Test your live site against common color blindness afflictions. No additional software required." />
-	<meta property="og:determiner" content="the" />
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:url" content="http://colorfuzz.com/" />
-	<meta property="og:image" content="http://colorfuzz.com/img/socialgraph.jpg" />
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@teleject">
-	<meta name="twitter:title" content="Color Fuzz! The Color Blindness Web Site Tester">
-	<meta name="twitter:description" content="Test your live site against common color blindness afflictions. No additional software required.">
-	<meta name="twitter:image" content="http://colorfuzz.com/img/socialgraph.jpg">  
-	<meta name="apple-mobile-web-app-title" content="Color Fuzz!" />
-
 	<meta name="description" content="Test your live site against common color blindness afflictions in your browser. No additional software required." /> 
-	<meta name="robots" content="index,follow" /> 
-	<meta name="robots" content="noodp" />
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
-	<link rel="stylesheet" href="/css/colorfuzz.css" />
+	<link rel="stylesheet" href="css/colorfuzz.css" />
 
 </head>
-<body>
+<body class="apple pie mom">
 
-<div id="masthead">
-<div id="searchbox">
-	<div>
-		<h1><a href="/"><img src="/img/colorfuzz.png" alt="Color Fuzz!" /></a></h1>
-	</div>
+<header>
+	<h1>&#8201;COLOR<em>&#8201;fuzz&#8201;</em></h1>
+	<p>Enter URL to test site's color blindness support</p>
+</header>
 
-	<div>
-		<form name="eyesightForm" id="eyesightForm">
+<article>
 
-		<div class="form--URL">
-			<input type="text" id="checkLink" name="checkLink" placeholder="http://" autocomplete="off"  />
-		</div>
-	</div>
-</div><!-- /#searchbox -->
+<form id="urlForm" name="urlForm">
 
+ <span>🌐</span> <input id="urlName" type="text" placeholder="http://example.com/" /><input type="submit" value="go" />
+
+<fieldset>
+   <legend>Types of Color Blindness:</legend>
 
 	<div id="radios">
 
-		<div><input type="radio" name="eyesight" value="Deuteranomaly" checked="checked" id="optionDeuteranomaly"> <label for="optionDeuteranomaly" title="Red-green color-blindness. Affects 5.35%">Deuteranomaly</label></label></div>
+		<div><input type="radio" name="eyesight" value="Deuteranomaly" checked="checked" id="optionDeuteranomaly"> <label for="optionDeuteranomaly" title="Red-green color-blindness. Affects 5.35%">Deuteranomaly</label></div>
 
-		<div><input type="radio" name="eyesight" value="Protanomaly" id="optionProtanomaly"> <label for="optionProtanomaly" title="Missing the L-cone, different intensities of red light. Affects 1.11%">Protanomaly</a></label></div>
+		<div><input type="radio" name="eyesight" value="Protanomaly" id="optionProtanomaly"> <label for="optionProtanomaly" title="Missing the L-cone, different intensities of red light. Affects 1.11%">Protanomaly</label></div>
 
-		<div><input type="radio" name="eyesight" value="Deuteranopia" id="optionDeuteranopia"><label for="optionDeuteranopia" title="Red-green color blindness due to missing M-cone. Affects 1.1%"> Deuteranopia </a></label></div>
-
-
-		<div><input type="radio" name="eyesight" value="Protanopia" id="optionProtanopia"> <label for="optionProtanopia" title="A type of red-green color-blindness. Affects 1.03%">Protanopia</a></label></div> 
-
-		<div><input type="radio" name="eyesight" value="Tritanopia" id="optionTritanopia"> <label for="optionTritanopia" title="Blue-yellow colorblindness due to missing S-cone. Affects <1%">Tritanopia</a></label></div>
+		<div><input type="radio" name="eyesight" value="Deuteranopia" id="optionDeuteranopia"><label for="optionDeuteranopia" title="Red-green color blindness due to missing M-cone. Affects 1.1%"> Deuteranopia </label></div>
 
 
-		<div><input type="radio" name="eyesight" value="Achromatopsia" id="optionAchromatopsia"> <label for="optionAchromatopsia" title="Rod monochromacy. Affects 0.003%">Achromatopsia</a></label></div>
+		<div><input type="radio" name="eyesight" value="Protanopia" id="optionProtanopia"> <label for="optionProtanopia" title="A type of red-green color-blindness. Affects 1.03%">Protanopia</label></div> 
 
-	</div><!-- /#radios -->
+		<div><input type="radio" name="eyesight" value="Tritanopia" id="optionTritanopia"> <label for="optionTritanopia" title="Blue-yellow colorblindness due to missing S-cone. Affects <1%">Tritanopia</label></div>
+
+
+		<div><input type="radio" name="eyesight" value="Achromatopsia" id="optionAchromatopsia"> <label for="optionAchromatopsia" title="Rod monochromacy. Affects 0.003%">Achromatopsia</label></div>
+
+	</div>
+
+</fieldset>
 
 </form>
 
-</div><!-- /#masthead -->
+</article>
 
+<footer>by <a href="http://Christopher.org">Christopher Schmitt</a></footer>
 
-<div id="slider" class=""><a href=""><h4 id="label">Deuteranomaly [X]</h4></a><iframe id="pageOutput" src="https://www.youtube.com/embed/OQSNhk5ICTI" class="Deuteranopia " width="800" height="300" frameborder="0" allowfullscreen></iframe></div>
-
-<footer><p>&copy; 2016; A <a href="http://Christopher.org">Christopher Schmitt</a> project</p></footer>
-
-
-
+<iframe id="iframeViewer" class="Deuteranomaly " sandbox="allow-same-origin allow-scripts" allowfullscreen></iframe>
 
 <!-- 01 // Deuteranomaly -->
 <svg><defs><filter id="Deuteranomaly"><feColorMatrix 
@@ -99,13 +77,8 @@ type="matrix" values="0.95 0.05 0 0 0, 0 0.433 0.567 0 0, 0 0.475 0.525 0 0, 0 0
 <svg><defs><filter id="Achromatopsia"><feColorMatrix 
 type="matrix" values="0.299 0.587 0.114 0 0, 0.299 0.587 0.114 0 0, 0.299 0.587 0.114 0 0, 0 0 0 1 0"/></filter></defs></svg>
 
-<script src="/js/colorfuzz-min.js"></script>
-</script>
 
-
+<script src="js/colorfuzz-min.js"></script>
 
 </body>
 </html>
-
-
-
